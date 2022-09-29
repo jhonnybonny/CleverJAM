@@ -1,0 +1,11 @@
+{
+    "FM_TEST": {
+        "Bandwidth": "10MHz", 
+        "Freq": 924e5
+    },
+    "FM_TEST2": {
+        "Bandwidth": "20MHz", 
+        "Freq": 10e5
+    }    
+}
+
