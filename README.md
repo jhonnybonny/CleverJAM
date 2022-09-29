@@ -1,5 +1,32 @@
 # CleverJAM
-SDR jammer with hopping
+Smart jammer based on SDR with frequency hopping
+
+## ⚠️ WARNING ⚠️
+
+Jamming is illegal !
+
+
+## Prerequisites
+
+- SDR devices that is enabled to transmit signal (HackRF, USRP, LimeSDR, BladeRF, etc.)
+- GNURadio 
+- A little bit of time 😉
+
+### Manual jamming 
+
+If you have a HackRF or any SDR device with osmocom drivers, you can run the code as follows:
+
+```sh
+$ python3 jam.py
+```
+
+also you can edit the GNURadio block schema ,  ``sources/jam.grc``:
+
+```sh
+$ gnuradio-companion sources/jam.grc
+```
+
+Then you can configure the central frequency with the QT GUI to target a frequency. But this tool has also a feature to do it automatically.
 
 ### Automatic cleverjamming
 
@@ -19,18 +46,14 @@ $ cat jam.json
 }
 ```
 
-```sh
-$ python3 clever.py --file jam.json -d jump_time
-```
 
-Then leverage the gain for transmission and you should observe that a lot of noise is overflowing the targeted cells with gaussian noise.
+Start cleverjamming
+```sh
+$ python3 clever.py --file jam.json -d jump_time_in_sec
+```
+❗️For use clever.py don't close jam.py❗️
 
 ![Jamming session](https://raw.githubusercontent.com/jhonnybonny/just-pic-/main/sceererreen.jpg)
 
-Please note that the delay between each targeted cell can be set with a provided arguments '-d' (see arguments helper). 
-$ python smartjam_rpcclient.py -f cells_<generated timestamp>.json
-Then leverage the gain for transmission and you should observe that a lot of noise is overflowing the targeted cells with gaussian noise.
+Please note that the jam hopping between each frequencies can be set with a arguments '-d' (see -h).
 
-Jamming session
-
-Please note that the delay between each targeted cell can be set with a provided arguments '-d' (see arguments helper).
