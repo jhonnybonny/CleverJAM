@@ -1,6 +1,7 @@
 options:
   parameters:
     author: ''
+    catch_exceptions: 'True'
     category: Custom
     cmake_opt: ''
     comment: ''
@@ -39,7 +40,7 @@ blocks:
     gui_hint: ''
     label: Bandwidth
     min_len: '200'
-    orient: Qt.Horizontal
+    orient: QtCore.Qt.Horizontal
     rangeType: float
     start: 2e6
     step: '10'
@@ -60,7 +61,7 @@ blocks:
     gui_hint: ''
     label: BB gain
     min_len: '200'
-    orient: Qt.Horizontal
+    orient: QtCore.Qt.Horizontal
     rangeType: float
     start: '10'
     step: '10'
@@ -81,7 +82,7 @@ blocks:
     gui_hint: ''
     label: Freq
     min_len: '200'
-    orient: Qt.Horizontal
+    orient: QtCore.Qt.Horizontal
     rangeType: float
     start: 10e6
     step: '500'
@@ -102,7 +103,7 @@ blocks:
     gui_hint: ''
     label: IF gain
     min_len: '200'
-    orient: Qt.Horizontal
+    orient: QtCore.Qt.Horizontal
     rangeType: float
     start: '10'
     step: '10'
@@ -123,7 +124,7 @@ blocks:
     gui_hint: ''
     label: RF gain
     min_len: '200'
-    orient: Qt.Horizontal
+    orient: QtCore.Qt.Horizontal
     rangeType: float
     start: '10'
     step: '10'
@@ -156,7 +157,7 @@ blocks:
     gui_hint: ''
     label: Sample rate
     min_len: '200'
-    orient: Qt.Horizontal
+    orient: QtCore.Qt.Horizontal
     rangeType: float
     start: 1e6
     step: '10'
@@ -531,7 +532,7 @@ blocks:
     showports: 'False'
     showrf: 'True'
     type: complex
-    wintype: firdes.WIN_BLACKMAN_hARRIS
+    wintype: window.WIN_BLACKMAN_hARRIS
   states:
     bus_sink: false
     bus_source: false
@@ -560,3 +561,4 @@ connections:
 
 metadata:
   file_format: 1
+  grc_version: 3.10.3.0
