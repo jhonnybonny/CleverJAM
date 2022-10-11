@@ -9,7 +9,7 @@ Jamming is illegal !
 ## Prerequisites
 
 - SDR devices that is enabled to transmit signal (HackRF, USRP, LimeSDR, BladeRF, etc.)
-- GNURadio 3.8
+- GNURadio 3.8 / 3.10 (maint-3.10 branch)
 - A little bit of time 😉
 
 ### Manual jamming 
