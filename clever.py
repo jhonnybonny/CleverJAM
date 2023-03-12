@@ -48,31 +48,20 @@ if __name__ == "__main__":
                 #findex = val['Freq']
                 cent_freq = val['Freq']
                 
-                
             if Bandwidth is not None:
                 cbandwidth = Bandwidth
             else:
                 if 'Bandwidth' in val:
-                    cbandwidth = int(val['Bandwidth'].replace('MHz',''))
-                    
-                    
-                    
+                    cbandwidth = int(val['Bandwidth'].replace('MHz',''))    
             try:
                     t_freqs[key] = {    'Freq' : cent_freq,
                                         'Bandwidth' : cbandwidth } 
             except Exception as e:
                 print (e)
-                
-                
-                
-                
-                
-                
-   
+
 #########################################################################################################################
 ###################################################PRINT SPACE###########################################################
 #########################################################################################################################
-
 
     while True:
         for key, val in t_freqs.items():
